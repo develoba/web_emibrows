@@ -1,0 +1,24 @@
+---
+import Arrow from "./Arrow.astro";
+import Icon from "./Icon.astro";
+---
+
+<nav class="flex flex-col justify-between items-center lg:flex-row">
+  <Icon height={200} width={250} />
+  <div>
+    <div class="flex items-center gap-4">
+      <h1 class="text-[4rem] lg:text-[7rem]">Tu belleza</h1>
+      <Arrow />
+    </div>
+    <h1 class="text-[4rem] lg:text-[7rem] -mt-[2rem]">
+      en mis <span>manos</span>
+    </h1>
+  </div>
+  <a class="btn mt-5">Mis servicios</a>
+</nav>
+
+<style>
+  span {
+    font-family: TTRamillasBoldItalic, serif;
+  }
+</style>
