@@ -1,0 +1,70 @@
+---
+interface Props {
+  id: string;
+  title: string;
+  contents: Content[];
+  isBrown: boolean;
+}
+
+interface Content {
+  subtitle: string;
+  text: string[];
+  prices: string[];
+}
+
+const { id, title, contents, isBrown } = Astro.props;
+---
+
+<article id={id} class="relative">
+  <div class={isBrown ? "layout-flowers-brown" : "layout-flowers"}></div>
+  <div class={`content ${isBrown ? "content-left" : ""}`}>
+    <h1>{title}</h1>
+    {
+      contents.map((content) => (
+        <div>
+          <h2>{content.subtitle}</h2>
+          {content.text.map((contentItem) => (
+            <p>{contentItem}</p>
+          ))}
+          {content.prices.map((priceItem) => (
+            <div class="btn price-btn">{priceItem}</div>
+          ))}
+        </div>
+      ))
+    }
+
+    <a
+      class="btn btn-purple apt-btn"
+      href="https://www.treatwell.es/establecimiento/studio-emibrows/"
+      target="_blank"
+    >
+      Pide tu cita
+    </a>
+  </div>
+</article>
+
+<style>
+  h1 {
+    color: var(--dark-purple);
+    font-size: 3rem;
+    margin-bottom: 2.2rem;
+  }
+  h2 {
+    color: var(--purple);
+    font-size: 1.5rem;
+    font-family: TTRamillas, serif;
+    margin-bottom: 1.5rem;
+  }
+
+  .apt-btn {
+    max-width: 240px;
+  }
+
+  .price-btn {
+    margin: 2rem 0;
+  }
+
+  .btn {
+    align-self: center;
+  }
+</style>

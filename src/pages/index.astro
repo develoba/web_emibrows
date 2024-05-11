@@ -3,12 +3,179 @@ import Layout from "../layouts/Layout.astro";
 import Header from "../components/Header.astro";
 import About from "../components/About.astro";
 import Services from "../components/Services.astro";
+import ServicesItem from "../components/ServicesItem.astro";
+
+interface Content {
+  subtitle: string;
+  text: string[];
+  prices: string[];
+}
+
+const contentMicroblading: Content = {
+  subtitle: "Microblading",
+  text: [
+    "El microblading es una técnica estética para corregir las imperfecciones de las cejas. Se utiliza un instrumento manual muy preciso que es capaz de dibujar unas cejas nuevas, pelo a pelo de forma que parezcan naturales, dibujando el arco de la ceja.",
+    "Las cejas parecerán más gruesas y la mirada más intensa.",
+    "Gracias al maquillaje permanente inyectado en la dermis a través de las pequeñas agujas colocadas en el ápice del instrumento manual utilizado.",
+  ],
+  prices: ["150€ - 120 minutos/sesión"],
+};
+const contentCejasSimple: Content = {
+  subtitle: "Diseño de cejas simple",
+  text: [
+    "Previo visagismo para lograr un diseño y trabajar en base a él o en la forma natural de tus cejas, depilando la zona indeseada con hilo/cera/pinzas.",
+    "Este servicio tiene una duración de unas 2-3 semanas aproximadamente.",
+  ],
+  prices: ["13€ - 30 minutos/sesión"],
+};
+
+const contentCejasHenna: Content = {
+  subtitle: "Diseño de cejas con pigmentación en henna",
+  text: [
+    "Depilación siguiendo el patrón del visagismo (mapping) y luego la aplicación del tinte o henna.",
+    "La duración del color en la piel es de 8 a 12 días y en el vello de 20 días aproximadamente.",
+  ],
+  prices: ["18€ - 45 minutos/sesión"],
+};
+
+const contentLaminacion: Content = {
+  subtitle: "Brow lamination",
+  text: [
+    "Aplicación de productos para cambiar la dirección natural del vello de las cejas y así dejarlo moldeable y fijo, consiguiendo un efecto de “cejas peinadas y orgánicas”",
+    "Realizamos también el diseño de cejas, hidratación con bótox y finalizado con keratina. La duración de este tratamiento es de 1 mes/ mes y medio, todo va depender del crecimiento del vello",
+    "Sesión: Depilación + Laminado + perfilado + tinte con bótox de regalo.",
+  ],
+  prices: ["35€ - 90 minutos/sesión"],
+};
+
+const contentLifting: Content = {
+  subtitle: "Lifting de pestañas",
+  text: [
+    "Tratamiento que consiste en cambiar la dirección natural de las pestañas logrando una nueva proyección, levantamiento y curvatura con la utilización de productos profesionales, certificados y especializados para así cuidar la salud de tus pestañas.",
+    "El efecto tiene una duración aproximada de 1 mes/ mes y medio, todo va depender del ciclo de crecimiento de tus pestañas.",
+    "Sesión: Lifting + bótox + tinte + keratina de regalo",
+  ],
+  prices: ["37€ - 75 minutos/sesión"],
+};
+
+const contentExtensiones: Content = {
+  subtitle: "Extensiones de pestañas",
+  text: [
+    "Es un servicio que consiste en aplicar una extensión de pelo artificial en cada pestaña natural, logrando un diseño acorde al tipo de ojo y rostro del cliente, es un proceso indoloro y muy cómodo",
+    "El efecto dura 28 días aprox., si deseas mantenerlas debes realizar un relleno cada 3 semanas o cuando tengas un 60% de extensiones en cada ojo.",
+  ],
+  prices: [
+    "45€ - Retoque con 60% de extensiones",
+    "70€ - Técnica de volumen",
+    "60€ - Pelo a pelo, efecto natural",
+    "Desde 10€ - Retirada de extensiones",
+  ],
+};
+
+const contentFacial: Content = {
+  subtitle: "Depilación facial",
+  text: [
+    "La depilación facial consiste en el retiro del vello con la técnica de hilo/cera (facial) garantizando que el resultado sea más duradero y el crecimiento sea más lento.",
+    "El tiempo de duración es de 3 a 4 semanas (todo va depender de la zona a tratar).",
+  ],
+  prices: [
+    "5€ - Frente",
+    "5€ - Labio superior",
+    "5€ - Pómulos",
+    "5€ - Patillas",
+    "35€ - Facial completo",
+  ],
+};
+
+const contentCorporal: Content = {
+  subtitle: "Depilación corporal",
+  text: [
+    "La depilación corporal consiste en el retiro del vello con la técnica de cera caliente desde la raíz, para así garantizar que el crecimiento sea más lento y duradero.",
+    "El tiempo de duración es de 3 a 4 semanas (todo va depender de la zona a tratar).",
+  ],
+  prices: [
+    "6€ - Axilas",
+    "15€ - Full Brazilian",
+    "15€ - Piernas completas",
+    "6€ ~ 8€  - Brazos",
+    "10€ - Ingles",
+  ],
+};
+
+const contentMasculino: Content = {
+  subtitle: "Depilación masculina",
+  text: [
+    "En EmiBrows Vigo también realizamos depilación masculina facial y corporal completa o de aquellas zonas de tu interés.",
+  ],
+  prices: [
+    "7€ - Axilas",
+    "7€ - 1/2 abdomen",
+    "17€ - Piernas completas",
+    "20€ - Ingles completas",
+    "10€ - Espalda completa",
+  ],
+};
 ---
 
 <Layout title="Welcome to Astro.">
   <Header />
   <About />
   <Services />
+  <ServicesItem
+    isBrown={true}
+    id="microblading"
+    title="Microblading de cejas"
+    contents={[contentMicroblading]}
+  />
+
+  <ServicesItem
+    isBrown={false}
+    id="diseno-cejas"
+    title="Diseño de cejas"
+    contents={[contentCejasSimple, contentCejasHenna]}
+  />
+
+  <ServicesItem
+    isBrown={true}
+    id="laminacion-cejas"
+    title="Laminación de cejas"
+    contents={[contentLaminacion]}
+  />
+
+  <ServicesItem
+    isBrown={false}
+    id="pestanas"
+    title="Pestañas"
+    contents={[contentLifting]}
+  />
+
+  <ServicesItem
+    isBrown={true}
+    id=""
+    title="Pestañas"
+    contents={[contentExtensiones]}
+  />
+
+  <ServicesItem
+    isBrown={false}
+    id="depilacion-facial-corporal"
+    title="Depilación facial/corporal"
+    contents={[contentFacial]}
+  />
+
+  <ServicesItem
+    isBrown={true}
+    id=""
+    title="Depilación facial/corporal"
+    contents={[contentCorporal]}
+  />
+
+  <ServicesItem
+    isBrown={false}
+    id=""
+    title="Depilación masculina"
+    contents={[contentMasculino]}
+  />
 </Layout>
 
 <style>

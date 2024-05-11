@@ -22,7 +22,10 @@ const { title } = Astro.props;
 </html>
 <style is:global>
   :root {
+    --dark-purple: #645b8d;
     --purple: #a897c9;
+    --grey: #9e9d9e;
+    --brown: #ebebeb;
     --accent-light: 224, 204, 250;
     --accent-dark: 49, 10, 101;
     --accent-gradient: linear-gradient(
@@ -38,6 +41,10 @@ const { title } = Astro.props;
   }
 
   @font-face {
+    font-family: TTRamillasItalic;
+    src: url("../../public/fonts/TT Ramillas Trial Italic.ttf");
+  }
+  @font-face {
     font-family: TTRamillasBoldItalic;
     src: url("../../public/fonts/TT Ramillas Trial Bold Italic.ttf");
   }
@@ -48,19 +55,66 @@ const { title } = Astro.props;
   html {
     font-family: Carlito, sans-serif;
     background: #fff;
+    scroll-behavior: smooth;
   }
   h1 {
-    font-family: TTRamillas, sans-serif;
+    font-family: TTRamillas, serif;
   }
 
   .btn {
+    display: block;
     border: 2px solid black;
     border-radius: 200px;
     padding: 0.8rem 3.3rem;
     font-size: 1.6rem;
+    text-align: center;
   }
+
+  .btn-purple {
+    border-color: var(--grey);
+    background-color: var(--purple);
+    color: white;
+  }
+
+  .content {
+    padding: 2rem 1.25rem;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .content-left {
+    align-items: end;
+    text-align: right;
+  }
+
   .layout-flowers {
-    padding: 10px;
-    background-color: red;
+    background-color: white;
+    z-index: 10;
+  }
+
+  .layout-flowers-brown {
+    background-color: var(--brown);
+    z-index: 10;
+  }
+
+  .layout-flowers::before,
+  .layout-flowers-brown::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../public/assets/flores-1.png");
+    background-size: cover;
+    background-position: 45% 40%;
+    opacity: 0.5;
+    z-index: -1;
+  }
+
+  .layout-flowers-brown::before {
+    background-color: var(--brown);
   }
 </style>
