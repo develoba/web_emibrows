@@ -4,6 +4,7 @@ import Header from "../components/Header.astro";
 import About from "../components/About.astro";
 import Services from "../components/Services.astro";
 import ServicesItem from "../components/ServicesItem.astro";
+import Footer from "../components/Footer.astro";
 
 interface Content {
   subtitle: string;
@@ -95,10 +96,10 @@ const contentCorporal: Content = {
   ],
   prices: [
     "6€ - Axilas",
-    "15€ - Full Brazilian",
+    "15€ - Ingles brasileñas",
     "15€ - Piernas completas",
     "6€ ~ 8€  - Brazos",
-    "10€ - Ingles",
+    "10€ - Ingles bikini",
   ],
 };
 
@@ -114,6 +115,54 @@ const contentMasculino: Content = {
     "20€ - Ingles completas",
     "10€ - Espalda completa",
   ],
+};
+
+const contentPackCejas: Content = {
+  subtitle: "Pack cejas",
+  text: ["Diseño de cejas + depilación labio superior."],
+  prices: ["16€ - 45 minutos/sesión"],
+};
+
+const contentPackMirada1: Content = {
+  subtitle: "Packs mirada",
+  text: ["Diseño de cejas + lifting de pestañas"],
+  prices: ["47€ - 105 minutos/sesión"],
+};
+
+const contentPackMirada2: Content = {
+  subtitle: "",
+  text: ["Diseño de cejas + extensiones de pestañas efecto rímel"],
+  prices: ["70€ - 150 minutos/sesión"],
+};
+
+const contentPackMirada3: Content = {
+  subtitle: "",
+  text: ["Diseño de cejas + extensiones de pestañas volumen"],
+  prices: ["80€ - 165 minutos/sesión"],
+};
+
+const contentPackMirada4: Content = {
+  subtitle: "",
+  text: ["Laminación de cejas + lifting de pestañas"],
+  prices: ["60€ - 165 minutos/sesión"],
+};
+
+const contentPackDepilacion1: Content = {
+  subtitle: "Packs depilación",
+  text: ["Depilación axilas + ingles brasileñas + media piernas"],
+  prices: ["25€ - 75 minutos/sesión"],
+};
+
+const contentPackDepilacion2: Content = {
+  subtitle: "",
+  text: ["Depilación axilas + ingles brasileñas + piernas completas"],
+  prices: ["30€ - 105 minutos/sesión"],
+};
+
+const contentPackDepilacion3: Content = {
+  subtitle: "",
+  text: ["Depilación axilas + ingles brasileñas"],
+  prices: ["15€ - 45 minutos/sesión"],
 };
 ---
 
@@ -176,6 +225,38 @@ const contentMasculino: Content = {
     title="Depilación masculina"
     contents={[contentMasculino]}
   />
+
+  <ServicesItem
+    isBrown={true}
+    id="packs"
+    title="Packs promocionales"
+    contents={[contentPackCejas]}
+  />
+
+  <ServicesItem
+    isBrown={false}
+    id=""
+    title="Packs promocionales"
+    contents={[
+      contentPackMirada1,
+      contentPackMirada2,
+      contentPackMirada3,
+      contentPackMirada4,
+    ]}
+  />
+
+  <ServicesItem
+    isBrown={true}
+    id=""
+    title="Packs promocionales"
+    contents={[
+      contentPackDepilacion1,
+      contentPackDepilacion2,
+      contentPackDepilacion3,
+    ]}
+  />
+
+  <Footer />
 </Layout>
 
 <style>

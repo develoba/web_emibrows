@@ -1,0 +1,41 @@
+---
+import Logo from "./Logo.astro";
+---
+
+<footer class="bg-[#191919] flex flex-col px-5 py-8 gap-5">
+  <div class="self-center flex flex-col items-center">
+    <Logo height={150} width={300} />
+    <a
+      class="btn btn-white w-[250px]"
+      href="https://www.treatwell.es/establecimiento/studio-emibrows/"
+      target="_blank"
+    >
+      Pide tu cita
+    </a>
+  </div>
+
+  <div class="text-white flex flex-col gap-8">
+    <div>
+      <p>emily@studioemibrows.com</p>
+      <p>697 628 499</p>
+    </div>
+    <div>
+      <p>Rúa de María Berdiales, 02, oficina entresuelo</p>
+      <p>36203 Vigo, Pontevedra</p>
+    </div>
+    <div class="flex gap-5">
+      <a href="https://www.facebook.com/emibrowsofficial" target="_blank"
+        ><i class="fa-brands fa-square-facebook fa-2xl"></i></a
+      >
+      <a href="https://www.instagram.com/studio_emibrows/" target="_blank"
+        ><i class="fa-brands fa-instagram fa-2xl"></i></a
+      >
+    </div>
+  </div>
+</footer>
+
+<style>
+  p {
+    font-size: 1.3rem;
+  }
+</style>

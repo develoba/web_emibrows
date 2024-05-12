@@ -13,6 +13,13 @@ const { title } = Astro.props;
     <meta name="description" content="Astro description" />
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <meta name="generator" content={Astro.generator} />
     <title>{title}</title>
   </head>
@@ -55,7 +62,6 @@ const { title } = Astro.props;
   html {
     font-family: Carlito, sans-serif;
     background: #fff;
-    scroll-behavior: smooth;
   }
   h1 {
     font-family: TTRamillas, serif;
@@ -74,6 +80,11 @@ const { title } = Astro.props;
     border-color: var(--grey);
     background-color: var(--purple);
     color: white;
+  }
+
+  .btn-white {
+    color: white;
+    border-color: white;
   }
 
   .content {
