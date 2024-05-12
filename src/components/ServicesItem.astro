@@ -21,13 +21,15 @@ const { id, title, contents, isBrown } = Astro.props;
     <h1>{title}</h1>
     {
       contents.map((content) => (
-        <div>
+        <div
+          class={`w-full flex flex-col ${isBrown ? "justify-end" : "justify-start"}`}
+        >
           <h2>{content.subtitle}</h2>
           {content.text.map((contentItem) => (
-            <p>{contentItem}</p>
+            <p class="pb-5">{contentItem}</p>
           ))}
           {content.prices.map((priceItem) => (
-            <div class="btn price-btn">{priceItem}</div>
+            <div class="btn price-btn w-full self-center">{priceItem}</div>
           ))}
         </div>
       ))
@@ -61,10 +63,13 @@ const { id, title, contents, isBrown } = Astro.props;
   }
 
   .price-btn {
-    margin: 2rem 0;
+    margin: 1rem 0 2rem;
   }
 
   .btn {
     align-self: center;
+    font-family: TTRamillas, serif;
+    font-size: 1.2rem;
+    font-weight: bold;
   }
 </style>
