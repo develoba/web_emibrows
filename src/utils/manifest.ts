@@ -1,0 +1,17 @@
+import type { ManifestOptions } from "vite-plugin-pwa";
+
+export const manifest: Partial<ManifestOptions> = {
+    "name": "Web Emibrows",
+    "short_name": "Web Emibrows",
+    "description": "Estudio de belleza especializado en servicios de cejas, pestañas y depilación facial y corporal.",
+    "theme_color": "#fff",
+    "background_color": "#fff",
+    "display": "fullscreen",
+    "icons": [
+        {
+            "src": "/assets/icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ]
+}
