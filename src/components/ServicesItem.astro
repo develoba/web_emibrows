@@ -28,17 +28,19 @@ const { id, title, contents, isBrown } = Astro.props;
           {content.text.map((contentItem) => (
             <p class="pb-5">{contentItem}</p>
           ))}
-          {content.prices.map((priceItem) => (
-            <div class="self-center btn price-btn w-full md:w-auto md:min-w-[25em] self-center">
-              {priceItem}
-            </div>
-          ))}
+          <div class="flex flex-col gap-4">
+            {content.prices.map((priceItem) => (
+              <div class="self-center btn price-btn w-full md:w-auto md:min-w-[25em] self-center">
+                {priceItem}
+              </div>
+            ))}
+          </div>
         </div>
       ))
     }
 
     <a
-      class="btn btn-purple apt-btn"
+      class="btn btn-purple apt-btn mt-5"
       href="https://www.treatwell.es/establecimiento/studio-emibrows/"
       target="_blank"
     >
@@ -64,20 +66,10 @@ const { id, title, contents, isBrown } = Astro.props;
     max-width: 240px;
   }
 
-  .price-btn {
-    margin: 1rem 0 2rem;
-  }
-
   .btn {
     align-self: center;
     font-family: TTRamillas, serif;
     font-size: 1.2rem;
     font-weight: bold;
-  }
-
-  @media screen and (min-width: 767px) {
-    .price-btn {
-      margin: 0.5rem 0 1rem;
-    }
   }
 </style>
