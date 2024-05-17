@@ -7,17 +7,17 @@ import Icon from "./Icon.astro";
   <Icon height={200} width={250} />
   <div>
     <div class="flex items-center gap-4">
-      <h1 class="text-[3.5rem] lg:text-[7rem]">Tu belleza</h1>
+      <h1 class="text-[3.5rem] md:text-[5rem]">Tu belleza</h1>
       <Arrow />
     </div>
-    <h1 class="text-[3.5rem] lg:text-[7rem] -mt-[2rem]">
+    <h1 class="text-[3.5rem] md:text-[5rem] -mt-[2rem]">
       en mis <span>manos</span>
     </h1>
   </div>
   <a href="#services" class="btn mt-5">Mis servicios</a>
 </nav>
 
-<section class="flex flex-col items-center gap-5 pt-10 mb-5">
+<section class="flex flex-col md:flex-row items-center gap-5 pt-10 mb-5">
   <figure class="hero-img">
     <img src="/assets/hero-1.jpg" />
   </figure>
@@ -25,10 +25,10 @@ import Icon from "./Icon.astro";
     <img src="/assets/hero-2.jpg" />
   </figure>
   <figure class="hero-img">
-    <img src="public/assets/hero-3.jpg" />
+    <img src="/assets/hero-3.jpg" />
   </figure>
   <figure class="hero-img">
-    <img src="public/assets/hero-4.jpg" />
+    <img src="/assets/hero-4.jpg" />
   </figure>
 </section>
 
@@ -51,5 +51,10 @@ import Icon from "./Icon.astro";
     height: auto;
     opacity: 0.7;
     object-fit: cover;
+  }
+  @media screen and (min-width: 767px) {
+    .hero-img {
+      height: clamp(200px, 15rem, 40vw);
+    }
   }
 </style>

@@ -2,9 +2,11 @@
 import Logo from "./Logo.astro";
 ---
 
-<section class="bg-[#191919] text-white px-5 py-8">
-  <div>
-    <h1 class="text-[4rem] lg:text-[7rem] leading-none mb-10">
+<section
+  class="bg-[#191919] text-white px-5 py-8 md:flex md:items-center md:gap-8"
+>
+  <div class="md:flex-1">
+    <h1 class="text-[4rem] md:text-[5rem] leading-none mb-10">
       Acerca de Emi<span class="font-bold">Brows</span>
     </h1>
     <p class="text-[20px]">
@@ -13,8 +15,8 @@ import Logo from "./Logo.astro";
       de experiencia en embellecimiento de miradas.
     </p>
   </div>
-  <div>
-    <Logo height={300} width={350} />
+  <div class="md:flex-1">
+    <Logo height={220} width={350} />
     <p class="text-[20px]">
       Siempre actualizada con las últimas tendencias y en constante formación
       para el perfeccionamiento de las técnicas, con el objetivo de cumplir y/o
