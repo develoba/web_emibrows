@@ -22,7 +22,7 @@ const { id, title, contents, isBrown } = Astro.props;
     {
       contents.map((content) => (
         <div
-          class={`w-full flex flex-col ${isBrown ? "justify-end" : "justify-start"}`}
+          class={`pt-10 w-full flex flex-col ${isBrown ? "justify-end" : "justify-start"}`}
         >
           <h2>{content.subtitle}</h2>
           {content.text.map((contentItem) => (
@@ -53,13 +53,13 @@ const { id, title, contents, isBrown } = Astro.props;
   h1 {
     color: var(--dark-purple);
     font-size: 3rem;
-    margin-bottom: 2.2rem;
+    margin-bottom: 1.8rem;
   }
   h2 {
     color: var(--purple);
     font-size: 1.5rem;
     font-family: TTRamillas, serif;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
   }
 
   .apt-btn {
