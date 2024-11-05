@@ -12,41 +12,38 @@ interface Content {
   prices: string[];
 }
 
-const contentMicroblading: Content = {
-  subtitle: "Microblading",
-  text: [
-    "El microblading es una técnica estética para corregir las imperfecciones de las cejas. Se utiliza un instrumento manual muy preciso que es capaz de dibujar unas cejas nuevas, pelo a pelo de forma que parezcan naturales, dibujando el arco de la ceja.",
-    "Las cejas parecerán más gruesas y la mirada más intensa.",
-    "Gracias al maquillaje permanente inyectado en la dermis a través de las pequeñas agujas colocadas en el ápice del instrumento manual utilizado.",
-  ],
-  prices: ["150€ - 120 min/sesión"],
-};
 const contentCejasSimple: Content = {
-  subtitle: "Diseño de cejas simple",
+  subtitle: "Diseño de cejas y depilación con hilo / cera",
   text: [
     "Previo visagismo para lograr un diseño y trabajar en base a él o en la forma natural de tus cejas, depilando la zona indeseada con hilo/cera/pinzas.",
     "Este servicio tiene una duración de unas 2-3 semanas aproximadamente.",
   ],
-  prices: ["13€ - 30 min/sesión"],
+  prices: ["15€ - 30 min/sesión"],
 };
 
 const contentCejasHenna: Content = {
-  subtitle: "Diseño de cejas con pigmentación en henna",
+  subtitle: "Diseño de cejas con tinte / henna",
   text: [
     "Depilación siguiendo el patrón del visagismo (mapping) y luego la aplicación del tinte o henna.",
     "La duración del color en la piel es de 8 a 12 días y en el vello de 20 días aproximadamente.",
   ],
-  prices: ["18€ - 45 min/sesión"],
+  prices: ["20€ - 45 min/sesión"],
+};
+
+const contentHenna: Content = {
+  subtitle: "Aplicación de tinte / henna",
+  text: [],
+  prices: ["10€ - 20 min/sesión"],
 };
 
 const contentLaminacion: Content = {
-  subtitle: "Brow lamination",
+  subtitle: "Laminación de cejas",
   text: [
     "Aplicación de productos para cambiar la dirección natural del vello de las cejas y así dejarlo moldeable y fijo, consiguiendo un efecto de “cejas peinadas y orgánicas”",
     "Realizamos también el diseño de cejas, hidratación con bótox y finalizado con keratina. La duración de este tratamiento es de 1 mes/ mes y medio, todo va depender del crecimiento del vello",
-    "Sesión: Depilación + Laminado + perfilado + tinte con bótox de regalo.",
+    "Sesión: Depilación + Laminado + tinte con bótox de regalo.",
   ],
-  prices: ["35€ - 90 min/sesión"],
+  prices: ["37€ - 90 min/sesión"],
 };
 
 const contentLifting: Content = {
@@ -56,7 +53,7 @@ const contentLifting: Content = {
     "El efecto tiene una duración aproximada de 1 mes/ mes y medio, todo va depender del ciclo de crecimiento de tus pestañas.",
     "Sesión: Lifting + bótox + tinte + keratina de regalo",
   ],
-  prices: ["37€ - 75 min/sesión"],
+  prices: ["39€ - 80 min/sesión"],
 };
 
 const contentExtensiones: Content = {
@@ -66,9 +63,9 @@ const contentExtensiones: Content = {
     "El efecto dura 28 días aprox., si deseas mantenerlas debes realizar un relleno cada 3 semanas o cuando tengas un 60% de extensiones en cada ojo.",
   ],
   prices: [
-    "45€ - Retoque con 60% de extensiones",
-    "70€ - Técnica de volumen",
-    "60€ - Pelo a pelo, efecto natural",
+    "42€ - Retoque con 60% de extensiones",
+    "72€ - Técnica de volumen",
+    "62€ - Pelo a pelo, efecto natural",
     "Desde 10€ - Retirada de extensiones",
   ],
 };
@@ -81,10 +78,10 @@ const contentFacial: Content = {
   ],
   prices: [
     "5€ - Frente",
-    "5€ - Labio superior",
+    "5€ - Labio superior e inferior",
     "5€ - Pómulos",
     "5€ - Patillas",
-    "35€ - Facial completo",
+    "35€ - Facial completo + diseño de cejas",
   ],
 };
 
@@ -103,66 +100,58 @@ const contentCorporal: Content = {
   ],
 };
 
-const contentMasculino: Content = {
-  subtitle: "Depilación masculina",
-  text: [
-    "En EmiBrows Vigo también realizamos depilación masculina facial y corporal completa o de aquellas zonas de tu interés.",
-  ],
-  prices: [
-    "7€ - Axilas",
-    "7€ - 1/2 abdomen",
-    "17€ - Piernas completas",
-    "20€ - Ingles completas",
-    "10€ - Espalda completa",
-  ],
-};
-
 const contentPackCejas: Content = {
   subtitle: "Pack cejas",
-  text: ["Diseño de cejas + depilación labio superior."],
-  prices: ["16€ - 45 min/sesión"],
+  text: ["Diseño de cejas + depilación labio superior e inferior."],
+  prices: ["18€ - 40 min/sesión"],
+};
+
+const contentPackCejas2: Content = {
+  subtitle: "",
+  text: ["Diseño de cejas + tinte/henna + depilación de una zona facial"],
+  prices: ["23€ - 55 min/sesión"],
 };
 
 const contentPackMirada1: Content = {
   subtitle: "Packs mirada",
   text: ["Diseño de cejas + lifting de pestañas"],
-  prices: ["47€ - 105 min/sesión"],
+  prices: ["50€ - 110 min/sesión"],
 };
 
 const contentPackMirada2: Content = {
   subtitle: "",
   text: ["Diseño de cejas + extensiones de pestañas efecto rímel"],
-  prices: ["70€ - 150 min/sesión"],
+  prices: ["73€ - 165 min/sesión"],
 };
 
 const contentPackMirada3: Content = {
   subtitle: "",
   text: ["Diseño de cejas + extensiones de pestañas volumen"],
-  prices: ["80€ - 165 min/sesión"],
+  prices: ["83€ - 180 min/sesión"],
 };
 
 const contentPackMirada4: Content = {
   subtitle: "",
   text: ["Laminación de cejas + lifting de pestañas"],
-  prices: ["60€ - 165 min/sesión"],
+  prices: ["70€ - 95 min/sesión"],
 };
 
 const contentPackDepilacion1: Content = {
   subtitle: "Packs depilación",
   text: ["Depilación axilas + ingles brasileñas + media piernas"],
-  prices: ["25€ - 75 min/sesión"],
+  prices: ["25€ - 60 min/sesión"],
 };
 
 const contentPackDepilacion2: Content = {
   subtitle: "",
   text: ["Depilación axilas + ingles brasileñas + piernas completas"],
-  prices: ["30€ - 105 min/sesión"],
+  prices: ["30€ - 90 min/sesión"],
 };
 
 const contentPackDepilacion3: Content = {
   subtitle: "",
-  text: ["Depilación axilas + ingles brasileñas"],
-  prices: ["15€ - 45 min/sesión"],
+  text: ["Depilación completa femenina"],
+  prices: ["50€ - 120 min/sesión"],
 };
 ---
 
@@ -170,67 +159,54 @@ const contentPackDepilacion3: Content = {
   <Header />
   <About />
   <Services />
+
   <ServicesItem
     isBrown={true}
-    id="microblading"
-    title="Microblading de cejas"
-    contents={[contentMicroblading]}
+    id="diseno-cejas"
+    title="Diseño de cejas"
+    contents={[contentCejasSimple, contentCejasHenna, contentHenna]}
   />
 
   <ServicesItem
     isBrown={false}
-    id="diseno-cejas"
-    title="Diseño de cejas"
-    contents={[contentCejasSimple, contentCejasHenna]}
-  />
-
-  <ServicesItem
-    isBrown={true}
     id="laminacion-cejas"
     title="Laminación de cejas"
     contents={[contentLaminacion]}
   />
 
   <ServicesItem
-    isBrown={false}
+    isBrown={true}
     id="pestanas"
     title="Pestañas"
     contents={[contentLifting]}
   />
 
   <ServicesItem
-    isBrown={true}
+    isBrown={false}
     id=""
     title="Pestañas"
     contents={[contentExtensiones]}
   />
 
   <ServicesItem
-    isBrown={false}
+    isBrown={true}
     id="depilacion-facial-corporal"
     title="Depilación facial/corporal"
     contents={[contentFacial]}
   />
 
   <ServicesItem
-    isBrown={true}
+    isBrown={false}
     id=""
     title="Depilación facial/corporal"
     contents={[contentCorporal]}
   />
 
   <ServicesItem
-    isBrown={false}
-    id=""
-    title="Depilación masculina"
-    contents={[contentMasculino]}
-  />
-
-  <ServicesItem
     isBrown={true}
     id="packs"
     title="Packs promocionales"
-    contents={[contentPackCejas]}
+    contents={[contentPackCejas, contentPackCejas2]}
   />
 
   <ServicesItem
