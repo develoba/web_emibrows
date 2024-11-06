@@ -12,6 +12,16 @@ interface Content {
   prices: string[];
 }
 
+const contentMicroblading: Content = {
+  subtitle: "Microblading",
+  text: [
+    "El microblading es una técnica estética para corregir las imperfecciones de las cejas. Se utiliza un instrumento manual muy preciso que es capaz de dibujar unas cejas nuevas, pelo a pelo de forma que parezcan naturales, dibujando el arco de la ceja.",
+    "Las cejas parecerán más gruesas y la mirada más intensa.",
+    "Gracias al maquillaje permanente inyectado en la dermis a través de las pequeñas agujas colocadas en el ápice del instrumento manual utilizado.",
+  ],
+  prices: ["150€ - 120 min/sesión"],
+};
+
 const contentCejasSimple: Content = {
   subtitle: "Diseño de cejas y depilación con hilo / cera",
   text: [
@@ -162,55 +172,62 @@ const contentPackDepilacion3: Content = {
 
   <ServicesItem
     isBrown={true}
+    id="microblading"
+    title="Microblading de cejas"
+    contents={[contentMicroblading]}
+  />
+
+  <ServicesItem
+    isBrown={false}
     id="diseno-cejas"
     title="Diseño de cejas"
     contents={[contentCejasSimple, contentCejasHenna, contentHenna]}
   />
 
   <ServicesItem
-    isBrown={false}
+    isBrown={true}
     id="laminacion-cejas"
     title="Laminación de cejas"
     contents={[contentLaminacion]}
   />
 
   <ServicesItem
-    isBrown={true}
+    isBrown={false}
     id="pestanas"
     title="Pestañas"
     contents={[contentLifting]}
   />
 
   <ServicesItem
-    isBrown={false}
+    isBrown={true}
     id=""
     title="Pestañas"
     contents={[contentExtensiones]}
   />
 
   <ServicesItem
-    isBrown={true}
+    isBrown={false}
     id="depilacion-facial-corporal"
     title="Depilación facial/corporal"
     contents={[contentFacial]}
   />
 
   <ServicesItem
-    isBrown={false}
+    isBrown={true}
     id=""
     title="Depilación facial/corporal"
     contents={[contentCorporal]}
   />
 
   <ServicesItem
-    isBrown={true}
+    isBrown={false}
     id="packs"
     title="Packs promocionales"
     contents={[contentPackCejas, contentPackCejas2]}
   />
 
   <ServicesItem
-    isBrown={false}
+    isBrown={true}
     id=""
     title="Packs promocionales"
     contents={[
@@ -222,7 +239,7 @@ const contentPackDepilacion3: Content = {
   />
 
   <ServicesItem
-    isBrown={true}
+    isBrown={false}
     id=""
     title="Packs promocionales"
     contents={[
